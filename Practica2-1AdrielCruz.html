@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UFT-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>>
+    </head>
+ 
+<body>
+     <h1>Cuadratica</h1>> 
+     <script>
+let a,b,c;
+a = parseFloat(window.prompt("Ingresa el valor a"));
+b = parseFloat(window.prompt("Ingresa el valor b"));
+c = parseFloat(window.prompt("Ingresa el valor c"));
+let raiz1= (-b + Math.sqrt(b*b-4*a*c))/2*a; 
+let raiz2= (-b - Math.sqrt(b*b-4*a*c))/2*a; 
+         function Calculo(a,b,c){
+            return [raiz1,raiz2];
+         }
+         document.write (`La primera solucion es  ${raiz1}  , y la segunda solucion es  ${raiz2} `);
+     </script>
+</body>
+</html>
