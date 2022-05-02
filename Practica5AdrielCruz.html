@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UFT-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>>
+    </head>
+ 
+<body>
+
+    <script>
+let Matriz3x3 = [];
+let filas = 3;
+let columnas = 3;
+for (var i = 0; i < filas; i++) {
+  Matriz3x3[i] = [];
+  for (var j = 0; j < columnas; j++) {    
+    Matriz3x3[i][j] = (i*columnas)+j+1;
+  }
+}
+console.log(Matriz3x3);
+
+Matriz1=[[Matriz3x3[2][2],Matriz3x3[2][1],Matriz3x3[2][0]],
+        [Matriz3x3[1][2],Matriz3x3[1][1],Matriz3x3[1][0]],
+        [Matriz3x3[0][2],Matriz3x3[0][1],Matriz3x3[0][0]]];
+
+Matriz2=[[Matriz3x3[0][0],Matriz3x3[1][0],Matriz3x3[2][0]],
+        [Matriz3x3[0][1],Matriz3x3[1][1],Matriz3x3[2][1]],
+        [Matriz3x3[0][2],Matriz3x3[1][2],Matriz3x3[2][2]]];
+
+Matriz3=[[Matriz3x3[2][2],Matriz3x3[1][2],Matriz3x3[0][2]],
+        [Matriz3x3[2][1],Matriz3x3[1][1],Matriz3x3[0][1]],
+        [Matriz3x3[2][0],Matriz3x3[1][0],Matriz3x3[0][0]]];
+
+console.log(Matriz1);
+console.log(Matriz2);
+console.log(Matriz3);
+    </script>
+</body>
+</html>
