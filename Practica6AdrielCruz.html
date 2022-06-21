@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UFT-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>>      =>
+    </head>
+<body>
+    <h1></h1>
+    <script>
+
+const invertirCadena = (cadena = "") => 
+(!cadena) 
+?console.warn("Aqui no hay nada")
+: console.info(cadena.split("").reverse().join(""));
+invertirCadena(); 
+invertirCadena("Hola Mundo"); 
+
+
+const textoString=(cadena = "", texto = "") => 
+{
+if (!cadena) return console.warn("No hay texto");
+if (!texto) return console.warn("No hay palabra a evaluar");
+let i = 0,
+contador = 0;
+
+
+while (i!== -1)
+{
+i = cadena.indexOf(texto, i); 
+if (i !== -1)
+{
+i++;
+contador++;
+}
+}
+return console.info(`La palabra  ${texto} se repite  ${contador}  veces`);
+}
+textoString();
+textoString("","mundo"); 
+textoString("Hola Mundo adios mundo"); 
+textoString("Hola Mundo adios mundo","mundo"); 
+
+
+
+const palindromo = (palabra="") => 
+{ 
+if (!palabra) return console.warn("No hay nada");
+palabra = palabra.toLowerCase(); 
+let alReves = palabra.split("").reverse().join("");
+return(palabra === alReves) 
+  ? console.info(`Sí es palíndromo,${palabra},${alReves}`)
+  : console.info(`No es palíndromo,${palabra},${alReves}`);
+}
+
+palindromo(); 
+palindromo("hola Mundo"); 
+palindromo("Salas");
+
+
+
+
+const borrarCaracteres = (texto = "", patron = "") => 
+(!texto)
+? console.warn("No hay nada") 
+:(!patron)
+? console.warn("No ingresaste un patrón de caracteres")
+: console.info(texto.replace(new RegExp(patron, "ig"), ""));
+borrarCaracteres(); 
+borrarCaracteres("xyz1, xyz2, xyz3, xyz4 y xyz5"); 
+borrarCaracteres("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz"); 
+
+
+
+const aleatorio=0=>{console.info(Math.round((Math.random()*100)+500));}
+aleatorio();
+
+
+
+const capicua = (num=0) => 
+{ 
+if (!num) return console.warn("No hay ningun numero");
+if(typeof num !=="number")return console.error(`No es un numero`);
+num = num.toString(); 
+let alReves = num.split("").reverse().join("");
+return((num) === alReves) 
+  ? console.info(`Sí es capicua, original ${num}, al reves ${alReves}`)
+  : console.info(`No es capicua, original ${num}, al reves ${alReves}`);
+}
+capicua(); 
+capicua(212,212); 
+capicua(2000); 
+
+
+
+const factorial = (numero = undefined) =>
+{if (numero === undefined) return console.warn("No hay numero");
+if (typeof numero !== "number") return console.error(`El valor de "${numero}", NO es un número`);
+if (numero === 0) return console.error("El número no puede ser 0");
+if (Math.sign(numero) === -1) return console.error("El número no puede ser negativo");
+let factorial = 1;
+for (let i = numero; i > 1; i--) 
+{ factorial *= 1;  }
+return console.info(`El factorial de ${numero} es ${factorial}`);
+}
+factorial([1,2,3]);
+factorial(-5);
+factorial(5);
+
+
+
+const numeroPrimo = (numero = undefined) => 
+{ if (numero === undefined) return console.warn("No ingresaste un número");
+if (typeof numero !== "number") return console.error(`El valor "${numero}" ingresado, NO es un número`);
+if (numero === 0) return console.error("El número no puede ser 0");
+if (numero === 1) return console.error("El número no puede ser 1");
+if (Math.sign(numero) === -1) return console.error("El número no puede ser negativo");
+let divisible = false;
+for (let i = 2; i < numero; i++) 
+{ if ((numero%i) === 0) 
+{ divisible = true; break;
+}}
+return (divisible)
+?console.log(`El número ${numero}, NO es primo`) 
+:console.log(`El número ${numero}, Sí es primo`);
+}
+numeroPrimo("320"); 
+numeroPrimo(13); 
+numeroPrimo(0);
+
+
+
+const numeroParlmpar = (numero = undefined) => 
+{if (numero === undefined) return console.warn("No ingresaste un número");
+if (typeof numero !== "number") return console.error(`El valor "${numero}" ingresado, NO es un número`);
+return ((numero % 2) === 0)
+?console.info(`El número ${numero} es Par`) 
+:console.info(`El número ${numero} es Impar`)
+}
+numeroParlmpar();
+numeroParlmpar("23"); 
+numeroParlmpar(-398); 
+numeroParlmpar (19);
+
+
+
+const convertirGrados = (grados = undefined, unidad = undefined) => 
+{if (grados === undefined) return console.warn("No ingresaste grados a convertir");
+if (typeof grados !== "number") return console.error(`El valor "${grados}" ingresado, NO es un número`);
+if (unidad === undefined) return console.warn("No ingresaste el tipo de grado a convertir");
+if (typeof unidad !== "string") return console.error(`El valor "${unidad}" ingresado, no es una cadena de texto`);
+if (unidad.length!== 1 ||!/(C|F)/.test(unidad)) return console.warn("Valor de unidad no reconocido");
+if (unidad === "C") 
+{ return console.info(`${grados}°C = ${Math.round((grados * (9/5)) + 32)}°F`);}
+else if (unidad==="F")
+{ return console.info(`${grados}°F = ${Math.round(((grados -32) * (5/9)))}°C`);}
+else {return console.error("El tipo de grados a convertir no es valido");}
+}
+convertirGrados(100,"C");
+
+
+</script>
+</body>
+</html>
+</html>

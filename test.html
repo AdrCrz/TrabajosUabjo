@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UFT-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>>
+    </head>
+ 
+<body>
+    <h1>Calculadora</h1>>   
+    <script>
+        let a,b,c;
+c = window.prompt("Ingresa el operando");
+a = parseFloat(window.prompt("Ingresa el primer numero"));
+b = parseFloat(window.prompt("Ingresa el segundo numero"));
+if (c == "+") {
+    let w= a+b;
+    document.write ("la suma es "+w+", ");
+} else if (c == "-") {
+    let x= a-b;
+    document.write ("la resta es "+x+". ");
+} else if (c == "*") {
+    let y= a*b;
+    document.write ("la multiplicacion es "+y+". ");
+} else if (c == "/") {
+    let z= a/b;
+    document.write ("la division es "+z+". ");
+} else if (c == "%") {
+    let v= a%b;
+    document.write ("el modulo es "+v+". ");
+}
+
+var rep = confirm("Repetir?");
+if( rep == true)
+{
+let a,b,c;
+c = window.prompt("Ingresa el operando");
+a = parseFloat(window.prompt("Ingresa el primer numero"));
+b = parseFloat(window.prompt("Ingresa el segundo numero"));
+  if (c == "+") {
+    let w= a+b;
+    document.write ("la suma es "+w+", ");
+} else if (c == "-") {
+    let x= a-b;
+    document.write ("la resta es "+x+". ");
+} else if (c == "*") {
+    let y= a*b;
+    document.write ("la multiplicacion es "+y+". ");
+} else if (c == "/") {
+    let z= a/b;
+    document.write ("la division es "+z+". ");
+} else if (c == "%") {
+    let v= a%b;
+    document.write ("el modulo es "+v+". ");
+} 
+} 
+else
+{
+  document.write ("ok ");
+}
+
+
+</script>
+</body>
+</html>
+</html>
